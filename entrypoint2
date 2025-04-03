@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+/*▄────────▄
+  █        █
+  █  Ядро  █
+  █        █
+  ▀────────▀*/
+require('./lib/core/core');
+
+/*▄───────▄
+  █       █
+  █  MVC  █
+  █       █
+  ▀───────▀*/
+// Коллекция текстов
+require('./lib/texts/text');
+require('./lib/texts/textAuth');
+
+// Коллекция интерфейсов
+require('./lib/views/viewAuth');
+
+// Коллекция моделей
+require('./lib/models/modelAuth');
+
+// Коллекция контроллеров
+require('./lib/controllers/controllerAuth');
+
+// Коллекция точек входа
+require('./lib/entrypoints/entrypoint');
+
+/*▄───────────────▄
+  █               █
+  █  Точка входа  █
+  █               █
+  ▀───────────────▀*/
+entrypoint
