@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+/*▄────────▄
+  █        █
+  █  Ядро  █
+  █        █
+  ▀────────▀*/
+require('core');
+require('.');
+
+/*▄───────▄
+  █       █
+  █  MVC  █
+  █       █
+  ▀───────▀*/
+// Коллекция точек входа
+require('./app/entrypoints/entrypointInstall');
+
+/*▄───────────────▄
+  █               █
+  █  Точка входа  █
+  █               █
+  ▀───────────────▀*/
+entrypoint = (...args) => {
+    if (args[0] == 'i') {
+        $.entrypoint.Install(...args.slice(1))
+    }
+};
